@@ -1,0 +1,17 @@
+﻿@model List<MeshackPortfolio.Models.Project>
+@{
+    ViewData["Title"] = "Projects";
+}
+
+<div class="container">
+    <h1>Projects</h1>
+    @foreach (var project in Model)
+    {
+        <div class="project">
+            <h3>@project.Title</h3>
+            <p>@project.Description</p>
+            <p><strong>Technologies:</strong> @project.Technologies</p>
+            <a href="@project.GitHubLink" target="_blank">GitHub Repository</a>
+        </div>
+    }
+</div>

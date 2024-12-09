@@ -1,0 +1,18 @@
+﻿@model List<MeshackPortfolio.Models.Skill>
+@{
+    ViewData["Title"] = "Skills";
+}
+
+<div class="container">
+    <h1>Skills</h1>
+    @foreach (var skill in Model)
+    {
+        <h3>@skill.Category</h3>
+        <ul>
+            @foreach (var item in skill.Skills)
+            {
+                <li>@item</li>
+            }
+        </ul>
+    }
+</div>
